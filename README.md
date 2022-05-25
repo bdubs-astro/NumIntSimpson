@@ -57,8 +57,8 @@ __Test code:__
 for Npts = logspace(1, 4, 4) + 1
     x = pi*linspace(0, 1, Npts);
     y = sin(x);
-    [method, simp] = Simpson(x, y);
-    fprintf('n = %-6d \tTrapz = %.6f \t%s = %.6f\n', Npts-1, trapz(x, y), method, simp)
+    [method, result] = Simpson(x, y);
+    fprintf('n = %-6d \tTrapz = %.6f \t%s = %.6f\n', Npts-1, trapz(x, y), method, result)
 end
 
 n = 10     	Trapz = 1.983524 	Simpson's 1/3 Rule = 2.000110
@@ -70,8 +70,8 @@ n = 10000  	Trapz = 2.000000 	Simpson's 1/3 Rule = 2.000000
 for Npts = logspace(1, 4, 4)
     x = pi*linspace(0, 1, Npts);
     y = sin(x);
-    [method, simp] = Simpson(x, y);
-    fprintf('n = %-6d \tTrapz = %.6f \t%s = %.6f\n', Npts-1, trapz(x, y), method, simp)
+    [method, result] = Simpson(x, y);
+    fprintf('n = %-6d \tTrapz = %.6f \t%s = %.6f\n', Npts-1, trapz(x, y), method, result)
 end
 
 n = 9      	Trapz = 1.979651 	Simpson's 3/8 Rule = 2.000382
